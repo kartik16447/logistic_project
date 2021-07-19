@@ -3,7 +3,8 @@ import Navbar from "./Navbar.js";
 import AdminPanel from "./AdminPanel/AdminPanel";
 import CreateInwardOrder from "./CreateInwardOrder/CreateInwardOrder";
 import CreateOutwardOrder from "./CreateOutwardOrder/CreateOutwardOrder";
-import "./newStyles.css";
+import Orders from "./Orders/Orders";
+import Login from "./Authentication/Login";
 
 function App() {
   return (
@@ -12,7 +13,12 @@ function App() {
         <Navbar />
         <div className="content">
           <Switch>
-            <Route exact path="/" />
+            <Route exact path="/">
+              <Login />
+            </Route>
+            <Route exact path="/orders">
+              <Orders />
+            </Route>
             <Route exact path="/adminPanel">
               <AdminPanel />
             </Route>

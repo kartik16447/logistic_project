@@ -6,6 +6,7 @@ const Navbar = () => {
       <h1>Indian Red Cross Society</h1>
       <div className="links">
         <Link to="/">Home</Link>
+        <Link to="/orders">Orders</Link>
         <Link to="/adminPanel">Admin Panel</Link>
         <Link
           className="button"

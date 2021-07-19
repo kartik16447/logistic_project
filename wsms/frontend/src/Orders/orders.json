@@ -1,0 +1,426 @@
+[{
+  "_id": {
+    "$oid": "60dc7e816354c4bbf5fa8a05"
+  },
+  "warehouse": {
+    "$oid": "60dc7af92218f5bac0506ca2"
+  },
+  "vendor": {
+    "$oid": "60dc7b2d2218f5bac0506caf"
+  },
+  "items": [
+    {
+      "name": "Bed Sheets",
+      "quantity": 3885,
+      "unit": "units",
+      "value": 139
+    },
+    {
+      "name": "Towel",
+      "quantity": 4496,
+      "unit": "units",
+      "value": 79
+    }
+  ],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60df2c4c12ecc9e904ec2a28"
+  },
+  "warehouse": {
+    "$oid": "60df27aba9b4b9e7ada083c8"
+  },
+  "vendor": {
+    "$oid": "60dc7b2d2218f5bac0506caf"
+  },
+  "items": [
+    {
+      "name": "Bed Sheets",
+      "quantity": 3885,
+      "unit": "units",
+      "value": 139
+    },
+    {
+      "name": "Towel",
+      "quantity": 4496,
+      "unit": "units",
+      "value": 79
+    }
+  ],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60df6573868b58eb457eb788"
+  },
+  "warehouse": {
+    "$oid": "60df27aba9b4b9e7ada083c8"
+  },
+  "vendor": {
+    "$oid": "60df6557868b58eb457eb783"
+  },
+  "items": [
+    {
+      "name": "Bed Sheets",
+      "quantity": 3885,
+      "unit": "units",
+      "value": 139
+    },
+    {
+      "name": "Towel",
+      "quantity": 4496,
+      "unit": "units",
+      "value": 79
+    }
+  ],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60eca9ab98582a32c841f670"
+  },
+  "receiverWarehouse": {
+    "$oid": "60eca764e88498320cc6a5d4"
+  },
+  "vendor": {
+    "$oid": "60eca70ae88498320cc6a5cc"
+  },
+  "items": [],
+  "status": [],
+  "nature": "INWARD",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60eca9bd98582a32c841f674"
+  },
+  "receiverWarehouse": {
+    "$oid": "60eca764e88498320cc6a5d4"
+  },
+  "vendor": {
+    "$oid": "60eca70ae88498320cc6a5cc"
+  },
+  "items": [
+    {
+      "received": 0,
+      "sent": 0,
+      "name": "Bed Sheets",
+      "quantity": 3885,
+      "unit": "units",
+      "value": 139
+    },
+    {
+      "received": 0,
+      "sent": 0,
+      "name": "Towel",
+      "quantity": 4496,
+      "unit": "units",
+      "value": 79
+    }
+  ],
+  "status": [
+    {
+      "received": 0,
+      "sent": 0,
+      "name": "Bed Sheets",
+      "quantity": 3885,
+      "unit": "units",
+      "value": 139
+    },
+    {
+      "received": 0,
+      "sent": 0,
+      "name": "Towel",
+      "quantity": 4496,
+      "unit": "units",
+      "value": 79
+    }
+  ],
+  "nature": "INWARD",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60eca9f72da28b32e7514c36"
+  },
+  "receiverWarehouse": {
+    "$oid": "60eca764e88498320cc6a5d4"
+  },
+  "vendor": {
+    "$oid": "60eca70ae88498320cc6a5cc"
+  },
+  "items": [
+    {
+      "received": 0,
+      "sent": 0,
+      "name": "Bed Sheets",
+      "quantity": 3885,
+      "unit": "units",
+      "value": 139
+    },
+    {
+      "received": 0,
+      "sent": 0,
+      "name": "Towel",
+      "quantity": 4496,
+      "unit": "units",
+      "value": 79
+    }
+  ],
+  "status": [
+    {
+      "received": 0,
+      "sent": 0,
+      "name": "Bed Sheets",
+      "quantity": 3885,
+      "unit": "units",
+      "value": 139
+    },
+    {
+      "received": 0,
+      "sent": 0,
+      "name": "Towel",
+      "quantity": 4496,
+      "unit": "units",
+      "value": 79
+    }
+  ],
+  "nature": "INWARD",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60ecb829714d37346bc5ae9e"
+  },
+  "senderWarehouse": {
+    "$oid": "60eca764e88498320cc6a5d4"
+  },
+  "receiverWarehouse": {
+    "$oid": "60eca764e88498320cc6a5d4"
+  },
+  "items": [
+    {
+      "received": 0,
+      "sent": 0,
+      "name": "Bed Sheets",
+      "quantity": 3885,
+      "unit": "units",
+      "value": 139
+    },
+    {
+      "received": 0,
+      "sent": 0,
+      "name": "Towel",
+      "quantity": 4496,
+      "unit": "units",
+      "value": 79
+    }
+  ],
+  "status": [
+    {
+      "received": 0,
+      "sent": 0,
+      "name": "Bed Sheets",
+      "quantity": 3885,
+      "unit": "units",
+      "value": 139
+    },
+    {
+      "received": 0,
+      "sent": 0,
+      "name": "Towel",
+      "quantity": 4496,
+      "unit": "units",
+      "value": 79
+    }
+  ],
+  "nature": "OUTWARD",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60ecbbd04cf03c35a7950d2b"
+  },
+  "senderWarehouse": {
+    "$oid": "60eca764e88498320cc6a5d4"
+  },
+  "consignee": {
+    "$oid": "60ecbb9f4cf03c35a7950d23"
+  },
+  "items": [
+    {
+      "received": 0,
+      "sent": 0,
+      "name": "Bed Sheets",
+      "quantity": 3885,
+      "unit": "units",
+      "value": 139
+    },
+    {
+      "received": 0,
+      "sent": 0,
+      "name": "Towel",
+      "quantity": 4496,
+      "unit": "units",
+      "value": 79
+    }
+  ],
+  "status": [
+    {
+      "received": 0,
+      "sent": 0,
+      "name": "Bed Sheets",
+      "quantity": 3885,
+      "unit": "units",
+      "value": 139
+    },
+    {
+      "received": 0,
+      "sent": 0,
+      "name": "Towel",
+      "quantity": 4496,
+      "unit": "units",
+      "value": 79
+    }
+  ],
+  "nature": "OUTWARD",
+  "__v": 7
+},{
+  "_id": {
+    "$oid": "60f05cc52cca9762857cbd35"
+  },
+  "receiverWarehouse": {
+    "$oid": "60f051ba8531835f8e0d8c71"
+  },
+  "vendor": {
+    "$oid": "60f04dd28531835f8e0d8c6f"
+  },
+  "items": [
+    {
+      "received": 0,
+      "sent": 0,
+      "value": 100,
+      "quantity": 10,
+      "unit": "units",
+      "name": "item a"
+    }
+  ],
+  "status": [
+    {
+      "received": 0,
+      "sent": 0,
+      "value": 100,
+      "quantity": 10,
+      "unit": "units",
+      "name": "item a"
+    }
+  ],
+  "nature": "inward",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60f05d222cca9762857cbd39"
+  },
+  "receiverWarehouse": {
+    "$oid": "60f051ba8531835f8e0d8c71"
+  },
+  "vendor": {
+    "$oid": "60f04dd28531835f8e0d8c6f"
+  },
+  "items": [
+    {
+      "received": 0,
+      "sent": 0,
+      "value": 100,
+      "quantity": 10,
+      "unit": "units",
+      "name": "item a"
+    },
+    {
+      "received": 0,
+      "sent": 0,
+      "value": 100,
+      "quantity": 1000,
+      "unit": "units",
+      "name": "item b"
+    }
+  ],
+  "status": [
+    {
+      "received": 0,
+      "sent": 0,
+      "value": 100,
+      "quantity": 10,
+      "unit": "units",
+      "name": "item a"
+    },
+    {
+      "received": 0,
+      "sent": 0,
+      "value": 100,
+      "quantity": 1000,
+      "unit": "units",
+      "name": "item b"
+    }
+  ],
+  "nature": "inward",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60f062d154083663cbe91850"
+  },
+  "senderWarehouse": {
+    "$oid": "60f051ba8531835f8e0d8c71"
+  },
+  "consignee": {
+    "$oid": "60f062162cca9762857cbd3b"
+  },
+  "items": [
+    {
+      "received": 0,
+      "sent": 0,
+      "value": 100,
+      "quantity": 10,
+      "unit": "units",
+      "name": "item a"
+    }
+  ],
+  "status": [
+    {
+      "received": 0,
+      "sent": 0,
+      "value": 100,
+      "quantity": 10,
+      "unit": "units",
+      "name": "item a"
+    }
+  ],
+  "nature": "outward",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60f062e654083663cbe91854"
+  },
+  "receiverWarehouse": {
+    "$oid": "60f051ba8531835f8e0d8c71"
+  },
+  "vendor": {
+    "$oid": "60f04dd28531835f8e0d8c6f"
+  },
+  "items": [
+    {
+      "received": 0,
+      "sent": 0,
+      "value": 100,
+      "quantity": 10,
+      "unit": "units",
+      "name": "item a"
+    }
+  ],
+  "status": [
+    {
+      "received": 0,
+      "sent": 0,
+      "value": 100,
+      "quantity": 10,
+      "unit": "units",
+      "name": "item a"
+    }
+  ],
+  "nature": "inward",
+  "__v": 0
+}]

@@ -1,14 +1,18 @@
-var express = require("express");
+const express = require("express");
 const cors = require("cors");
 
 const order = require("../controllers/createOrder");
+const {
+  requireAuth,
+  checkUser,
+  adminPermission,
+} = require("../authentication/authMiddleware");
 
 const router = express.Router();
-router.use(cors());
 
-router.post("/", order.create);
+router.post("/", adminPermission, order.create);
 router.get("/", order.get);
-router.delete("/", order._delete);
+router.delete("/", adminPermission, order._delete);
 router.patch("/status", order.update);
 
 module.exports = router;

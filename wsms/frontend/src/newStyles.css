@@ -220,3 +220,11 @@ select {
   padding: 8px;
   margin: 10px 0px;
 }
+.OrdersPage {
+  width: 100%;
+  padding: 8px;
+}
+.order {
+  width: 100%;
+  padding: 8px;
+}

@@ -17,7 +17,12 @@ export default function AdminPanel() {
   const onSubmit = (data) => {
     fetch(`http://localhost:8000/${data.type}`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      credentials: "include",
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Credentials": "true",
+      },
+      withCredentials: true,
       body: JSON.stringify(data),
     }).then((response) => {
       console.log(response);

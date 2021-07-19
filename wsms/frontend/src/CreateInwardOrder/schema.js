@@ -5,8 +5,6 @@ import * as yup from "yup";
 const Schema = yup.object().shape({
   warehouseName: yup.string().required("Please submit a warehouse name"),
   vendorName: yup.string().required("Please submit a vendor name"),
-  vendorAddress: yup.string().required("Please submit vendor's address"),
-  deliveryAddress: yup.string().required("Please submit delivery address"),
   dispatchDate: yup
     .date("Please submit a correct date")
     .typeError("Please submit a valid date")
@@ -24,10 +22,10 @@ const Schema = yup.object().shape({
     .min(1)
     .of(
       yup.object().shape({
-        itemName: yup.string().required(),
-        itemUnit: yup.string().required(),
-        itemQuantity: yup.number().positive().integer().required(),
-        itemValue: yup.number().positive().required(),
+        name: yup.string().required(),
+        unit: yup.string().required(),
+        quantity: yup.number().positive().integer().required(),
+        value: yup.number().positive().required(),
       })
     ),
 });

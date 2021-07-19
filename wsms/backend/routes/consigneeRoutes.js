@@ -4,7 +4,6 @@ const cors = require("cors");
 const consignee = require("../controllers/createConsignee");
 
 const router = express.Router();
-router.use(cors());
 
 router.post("/", consignee.create_post);
 router.get("/", consignee.get);

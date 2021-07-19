@@ -9,6 +9,7 @@ const {
 const { Warehouse } = require("../models/warehouse");
 const { Vendor } = require("../models/vendor");
 const { Consignee } = require("../models/consignee");
+const { isLoggedIn, isAuthor } = require("../authentication/middleware");
 
 const create = (req, res) => {
   const body = req.body;
@@ -16,7 +17,7 @@ const create = (req, res) => {
   // const newOrder = new Order(req.body);
   //Alternate Method:
 
-  if (body.nature == "OUTWARD") {
+  if (body.nature == "outward") {
     var swid = "";
     var rwid = "";
     var cid = "";
@@ -149,7 +150,9 @@ const get = (req, res) => {
     console.log(`get request made for order: ${id}`);
     get_by_id(req, res, id);
   } else {
+    console.log("getting all orders");
     get_all(req, res);
+    // isLoggedIn;
   }
 };
 
@@ -168,7 +171,8 @@ const update = (req, res) => {
   console.log(`update request made`);
   const id = req.body._id;
   const status = req.body.status;
-  update_status(req, res, id, status);
+  const idDelivered = req.body.isDelivered;
+  update_status(req, res, id, status, isDelivered);
 };
 
 module.exports = {

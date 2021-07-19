@@ -7,6 +7,16 @@ const warehouseSchema = new Schema({
     required: true,
     unique: true,
   },
+  username: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  password: {
+    type: String,
+    required: true,
+    default: "password",
+  },
   address: {
     type: String,
   },
@@ -16,7 +26,32 @@ const warehouseSchema = new Schema({
   emailId: {
     type: String,
   },
+  level: {
+    type: String,
+    required: true,
+    enum: ["admin", "nhq", "user"],
+    default: "user",
+  },
 });
+
+warehouseSchema.pre("save", async function (next) {
+  // const salt = await bcrypt.genSalt();
+  // this.password = await bcrypt.hash(this.password, salt);
+  next();
+});
+
+// static method to login user
+warehouseSchema.statics.login = async function (username, password) {
+  const user = await this.findOne({ username });
+  if (user) {
+    // const auth = ;
+    if (password === user.password) {
+      return user;
+    }
+    throw Error("incorrect password");
+  }
+  throw Error("incorrect username");
+};
 
 const Warehouse = mongoose.model("Warehouse", warehouseSchema);
 

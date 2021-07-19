@@ -5,8 +5,8 @@ function totalCal(results) {
   let totalValue = 0;
 
   results.forEach((element) => {
-    const value = parseInt(element.itemValue, 10);
-    const quantity = parseInt(element.itemQuantity, 10);
+    const value = parseInt(element.value, 10);
+    const quantity = parseInt(element.quantity, 10);
     if (!isNaN(value) && !isNaN(quantity)) {
       totalValue = totalValue + value * quantity;
     }
