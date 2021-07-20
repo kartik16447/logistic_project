@@ -21,12 +21,12 @@ const itemSchema = new Schema(
     },
     received: {
       type: Number,
-      required: false,
+      required: true,
       default: 0,
     },
     sent: {
       type: Number,
-      required: false,
+      required: true,
       default: 0,
     },
   },

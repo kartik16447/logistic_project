@@ -5,9 +5,19 @@ const Navbar = () => {
     <nav className="navbar">
       <h1>Indian Red Cross Society</h1>
       <div className="links">
-        <Link to="/">Home</Link>
-        <Link to="/orders">Orders</Link>
-        <Link to="/adminPanel">Admin Panel</Link>
+        <Link to="/">Orders</Link>
+        <Link to="/login">Login</Link>
+        <Link
+          className="button"
+          to="/adminPanel"
+          style={{
+            color: "white",
+            backgroundColor: "#ec5990",
+            borderRadius: "8px",
+          }}
+        >
+          Admin Panel
+        </Link>
         <Link
           className="button"
           to="/createInwardOrder"

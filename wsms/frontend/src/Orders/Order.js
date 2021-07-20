@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDom from "react-dom";
 import { useState } from "react";
+import { Controller, useFieldArray, useForm } from "react-hook-form";
 
 // import "./index.css";
 // import orders from './orders';
@@ -20,6 +21,26 @@ const Order = ({
   nature,
   isDelivered,
 }) => {
+  const {
+    register,
+    control,
+    handleSubmit,
+    reset,
+    formState: { errors },
+    setValue,
+  } = useForm({
+    defaultValues: {
+      item: [
+        {
+          name: "",
+          unit: "",
+          quantity: "",
+          value: "",
+        },
+      ],
+    },
+  });
+
   const [buttonPopup, setButtonPopup] = useState(false);
   const [buttonPopup2, setButtonPopup2] = useState(false);
 
@@ -48,11 +69,21 @@ const Order = ({
     //   });
   };
 
-  const deleteButton = (isDelivered) => {
+  const deleteButton = (_id) => {
+    return <button>Delete</button>;
+  };
+
+  const markAsDelivered = (isDelivered) => {
     if (!isDelivered) {
-      return <button>Delete</button>;
-    } else {
-      return <button>Delete</button>;
+      return (
+        <button
+          onClick={() => {
+            //TODO
+          }}
+        >
+          Mark As Delivered
+        </button>
+      );
     }
   };
 
@@ -132,22 +163,30 @@ const Order = ({
             <h1>Items - </h1>
             {status.map((object, index) => {
               return (
-                <li key={index}>
+                <section key={index} className="items">
+                  <div className="important">
+                    <h3>{status[index].name}</h3>
+                  </div>
                   <h3>
-                    {" "}
-                    {status[index].name} -{" "}
-                    {status[index].recieved || status[index].sent}/
+                    {"Quantity: "}
                     {status[index].quantity}
+                    {" Unit: "}
+                    {status[index].unit}
+                    {" Value: "}
+                    {status[index].value}
+                    {" Received: "}
+                    {status[index].received}
                   </h3>
-                </li>
+                </section>
               );
             })}
             <h1>Total: {totalValue}</h1>
           </Status>
 
-          {deleteButton(isDelivered)}
-
           {updateButton(isDelivered)}
+          {deleteButton(_id)}
+          {markAsDelivered(isDelivered)}
+
           <UpdateStatus trigger={buttonPopup} setTrigger={setButtonPopup}>
             <form
               onSubmit={(event) => {
@@ -156,8 +195,8 @@ const Order = ({
                 setButtonPopup(false);
               }}
             >
-              <h3> Update Status of Order {_id} </h3>
-              <p> Enter Number of Recieved Items: </p>
+              <h1> Update Status of Order {_id} </h1>
+              <h2> Enter Number of Recieved Items: </h2>
 
               {status.map((object, index) => {
                 const handleChange = (event) => {
@@ -165,21 +204,48 @@ const Order = ({
                 };
 
                 return (
-                  <li key={index}>
-                    <h1>
-                      {" "}
-                      {status[index].name}{" "}
+                  <section key={index} className="items">
+                    <div className="important">
+                      <h3>{status[index].name}</h3>
+                    </div>
+                    <h3>
+                      {"Quantity: "}
+                      {status[index].quantity}
+                      {" Unit: "}
+                      {status[index].unit}
+                      {" Value: "}
+                      {status[index].value}
+                    </h3>
+                    <div className="input">
                       <input
+                        className="inputField"
                         type="number"
                         id="inputQuantityDelivered"
                         name={inputNumber[index]}
                         onChange={handleChange}
+                        placeholder="Received"
                       />
-                      of {status[index].quantity} (
-                      {status[index].received || status[index].sent} completed
-                      previously)
-                    </h1>
-                  </li>
+                      <h3>
+                        of {status[index].quantity} (
+                        {status[index].received || status[index].sent} completed
+                        previously)
+                      </h3>
+                    </div>
+                  </section>
+                  // <section key={index}>
+                  //   <h3>
+                  //     {status[index].name}{" "}
+                  //     <input
+                  //       type="number"
+                  //       id="inputQuantityDelivered"
+                  //       name={inputNumber[index]}
+                  //       onChange={handleChange}
+                  //     />
+                  //     of {status[index].quantity} (
+                  //     {status[index].received || status[index].sent} completed
+                  //     previously)
+                  //   </h3>
+                  // </section>
                 );
               })}
 

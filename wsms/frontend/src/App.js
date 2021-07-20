@@ -14,10 +14,10 @@ function App() {
         <div className="content">
           <Switch>
             <Route exact path="/">
-              <Login />
-            </Route>
-            <Route exact path="/orders">
               <Orders />
+            </Route>
+            <Route exact path="/login">
+              <Login />
             </Route>
             <Route exact path="/adminPanel">
               <AdminPanel />

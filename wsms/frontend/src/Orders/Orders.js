@@ -81,16 +81,18 @@ export default function Orders() {
   });
 
   return (
-    <section className="OrdersPage">
+    <div className="OrdersPage">
       <h1>ONGOING ORDERS -</h1>
-      {ongoingOrders.map((order) => {
-        return <Order key={order.id} {...order} />;
-      })}
+      <div className="Orders">
+        {ongoingOrders.map((order) => {
+          return <Order key={order.id} {...order} />;
+        })}
+      </div>
       )<h1>COMPLETED ORDERS -</h1>
       {completedOrders.map((order) => {
         return <Order key={order.id} {...order}></Order>;
       })}
-    </section>
+    </div>
   );
 }
 // ReactDom.render(<Orderlist />, document.getElementById("root"));
