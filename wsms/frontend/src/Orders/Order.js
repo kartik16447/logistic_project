@@ -107,12 +107,20 @@ const Order = ({
       );
     }
 
-    if (nature == "outward") {
+    if (nature == "outward" && consignee != null) {
       return (
         <section>
           {" "}
           <h2>Warehouse : {senderWarehouse.name} </h2>
           <h2> Consignee : {consignee.name} </h2>
+        </section>
+      );
+    } else if (nature == "outward" && receiverWarehouse != null) {
+      return (
+        <section>
+          {" "}
+          <h2>Sender Warehouse : {senderWarehouse.name} </h2>
+          <h2> Receiver Warehouse : {receiverWarehouse.name} </h2>
         </section>
       );
     }
