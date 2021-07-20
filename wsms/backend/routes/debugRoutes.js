@@ -1,10 +1,14 @@
 const express = require("express");
-const cors = require("cors");
 
 const router = express.Router();
 
-router.get("/", (req, res) => {
+console.log("The website is working");
+
+const confirm = (req, res) => {
+  console.log("\n\nThe Website is Working");
   res.send("The Website is Working");
-});
+};
+
+router.get("/", confirm);
 
 module.exports = router;

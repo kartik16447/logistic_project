@@ -53,6 +53,7 @@ export default function AdminPanel() {
 
       {isType === "warehouse" && (
         <div>
+          <input placeholder="Username" {...register("username")} />
           <input placeholder="Password" {...register("password")} />
         </div>
       )}
