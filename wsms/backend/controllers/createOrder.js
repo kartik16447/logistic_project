@@ -28,7 +28,7 @@ const create = (req, res) => {
         swid = data._id;
       })
       .then(function (data) {
-        if ((body.type = "consignee")) {
+        if (body.type === "consignee") {
           Consignee.findOne({ name: body.receiversName })
             .exec()
             .then(function (data) {
@@ -37,6 +37,9 @@ const create = (req, res) => {
             })
             .then(function (data) {
               create_outward_post_c(req, res, swid, cid, body);
+            })
+            .catch((err) => {
+              console.log(err);
             });
         } else {
           Warehouse.findOne({ name: body.receiversName })
@@ -47,8 +50,14 @@ const create = (req, res) => {
             })
             .then(function (data) {
               create_outward_post_rw(req, res, swid, rwid, body);
+            })
+            .catch((err) => {
+              console.log(err);
             });
         }
+      })
+      .catch((err) => {
+        console.log(err);
       });
   } else {
     var vid = "";
@@ -69,7 +78,13 @@ const create = (req, res) => {
           })
           .then(function (data) {
             create_inward_post(req, res, vid, rwid, body);
+          })
+          .catch((err) => {
+            console.log(err);
           });
+      })
+      .catch((err) => {
+        console.log(err);
       });
   }
 };
